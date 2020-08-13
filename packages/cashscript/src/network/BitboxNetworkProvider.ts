@@ -4,8 +4,8 @@ import NetworkProvider from './NetworkProvider';
 
 export default class BitboxNetworkProvider implements NetworkProvider {
   constructor(
-    public network: Network = Network.MAINNET,
-    private bitbox: BITBOX = new BITBOX({ restURL: 'https://rest.bitcoin.com/v2/' }),
+    public network: Network,
+    private bitbox: BITBOX,
   ) {}
 
   async getUtxos(address: string): Promise<Utxo[]> {
