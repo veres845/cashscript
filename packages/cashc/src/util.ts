@@ -104,7 +104,7 @@ export const Data = {
 
   asmToBytecode(asm: string): Uint8Array {
     // Remove any duplicate whitespace
-    asm = asm.replace(/\s+/g, ' ');
+    asm = asm.replace(/\s+/g, ' ').trim();
 
     // Convert the ASM tokens to AuthenticationInstructions
     const instructions = asm.split(' ').map((token) => {
@@ -129,7 +129,7 @@ export const Data = {
     asm = asm.replace(/(^|\s)0x/g, ' ');
 
     // Remove any duplicate whitespace
-    asm = asm.replace(/\s+/g, ' ');
+    asm = asm.replace(/\s+/g, ' ').trim();
 
     return asm;
   },
