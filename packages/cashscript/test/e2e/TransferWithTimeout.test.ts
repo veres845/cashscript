@@ -15,8 +15,8 @@ describe('TransferWithTimeout', () => {
     // eslint-disable-next-line global-require
     const artifact = require('../fixture/transfer_with_timeout.json');
     const provider = new ElectrumNetworkProvider();
-    twtInstancePast = new Contract(artifact, provider, [alicePk, bobPk, 500000]);
-    twtInstanceFuture = new Contract(artifact, provider, [alicePk, bobPk, 2000000]);
+    twtInstancePast = new Contract(artifact, [alicePk, bobPk, 500000], provider);
+    twtInstanceFuture = new Contract(artifact, [alicePk, bobPk, 2000000], provider);
     console.log(twtInstancePast.address);
     console.log(twtInstanceFuture.address);
   });

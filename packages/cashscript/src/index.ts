@@ -14,6 +14,7 @@ export {
   Recipient,
   SignatureAlgorithm,
   HashType,
+  Network,
 } from './interfaces';
 export * from './Errors';
 export * from './network';

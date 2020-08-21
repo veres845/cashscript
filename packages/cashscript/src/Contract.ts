@@ -25,8 +25,8 @@ export class Contract {
 
   constructor(
     private artifact: Artifact,
-    private provider: NetworkProvider,
     constructorParameters: Parameter[],
+    private provider: NetworkProvider,
   ) {
     if (!artifact.abi || !artifact.bytecode
      || !artifact.constructorInputs || !artifact.contractName

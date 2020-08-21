@@ -18,7 +18,7 @@ describe('P2PKH', () => {
     // eslint-disable-next-line global-require
     const artifact = require('../fixture/p2pkh.json');
     const provider = new ElectrumNetworkProvider();
-    p2pkhInstance = new Contract(artifact, provider, [alicePkh]);
+    p2pkhInstance = new Contract(artifact, [alicePkh], provider);
     console.log(p2pkhInstance.address);
   });
 

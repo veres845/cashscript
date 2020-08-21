@@ -210,7 +210,7 @@ export class Transaction {
   }
 
   async send(): Promise<LibauthTransaction>;
-  async send(): Promise<string>;
+  async send(raw: true): Promise<string>;
 
   async send(raw?: true): Promise<LibauthTransaction | string> {
     const tx = await this.build();
