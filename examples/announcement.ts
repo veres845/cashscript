@@ -23,7 +23,7 @@ export async function run(): Promise<void> {
     // Derive alice's public key
     const alicePk = bitbox.ECPair.toPublicKey(alice);
 
-    // Compile the P2PKH contract to an artifact object
+    // Compile the Announcement contract to an artifact object
     const artifact = CashCompiler.compileFile(path.join(__dirname, 'announcement.cash'));
 
     // Initialise a network provider for network operations on MAINNET

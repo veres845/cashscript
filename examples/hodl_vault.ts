@@ -27,7 +27,7 @@ async function run(): Promise<void> {
   const oraclePk = bitbox.ECPair.toPublicKey(oracleKeypair);
   const oracle = new PriceOracle(oracleKeypair);
 
-  // Compile the P2PKH contract to an artifact object
+  // Compile the HodlVault contract to an artifact object
   const artifact = CashCompiler.compileFile(path.join(__dirname, 'hodl_vault.cash'));
 
   // Initialise a network provider for network operations on TESTNET

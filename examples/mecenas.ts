@@ -31,7 +31,7 @@ export async function run(): Promise<void> {
   // Derive alice's address
   const aliceAddress = bitbox.ECPair.toCashAddress(alice);
 
-  // Compile the P2PKH contract to an artifact object
+  // Compile the Mecenas contract to an artifact object
   const artifact = CashCompiler.compileFile(path.join(__dirname, 'mecenas.cash'));
 
   // Initialise a network provider for network operations on TESTNET

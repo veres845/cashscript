@@ -26,7 +26,7 @@ async function run(): Promise<void> {
   const alicePk = bitbox.ECPair.toPublicKey(alice);
   const bobPk = bitbox.ECPair.toPublicKey(bob);
 
-  // Compile the TransferWithTimeout Cash Contract
+  // Compile the TransferWithTimeout contract
   const artifact = CashCompiler.compileFile(path.join(__dirname, 'transfer_with_timeout.cash'));
 
   // Initialise a network provider for network operations on TESTNET
